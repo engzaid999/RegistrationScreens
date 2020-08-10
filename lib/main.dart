@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:registration/Login1.dart';
+import 'package:registration/Login2.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Montserrat',
       ),
-      home: Login1(),
+      home: Login2(),
     );
   }
 }
