@@ -23,7 +23,7 @@ class _Login3State extends State<Login3> {
       resizeToAvoidBottomPadding: false,
       body: Stack(
         children: <Widget>[
-          Image.asset('assets/images/girl.jpg',fit: BoxFit.cover,
+          Image.asset('assets/images/girl2.jpg',fit: BoxFit.cover,
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           ),
