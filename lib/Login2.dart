@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login2 extends StatefulWidget {
   @override
@@ -10,47 +11,52 @@ class Login2 extends StatefulWidget {
 class _Login2State extends State<Login2> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        resizeToAvoidBottomPadding: false,
-        backgroundColor: Colors.white,
-        body: Padding(
-          padding: EdgeInsets.only(top: 15),
-          child: SafeArea(
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xff33691e).withOpacity(0.4), width: 2),
-                        shape: BoxShape.circle),
-                    child: Center(
-                      child: SvgPicture.asset(
-                        'assets/svg/Mobilelog.svg',
-                        height: 200,
-                        width: 200,
+    return Theme(
+      data: ThemeData(
+        fontFamily: GoogleFonts.montserrat().fontFamily,
+      ),
+      child: Scaffold(
+          resizeToAvoidBottomPadding: false,
+          backgroundColor: Colors.white,
+          body: Padding(
+            padding: EdgeInsets.only(top: 15),
+            child: SafeArea(
+              child: Center(
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Color(0xff33691e).withOpacity(0.4), width: 2),
+                          shape: BoxShape.circle),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/svg/Mobilelog.svg',
+                          height: 200,
+                          width: 200,
+                        ),
                       ),
                     ),
-                  ),
-                  _form(context),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Center(
-                    child: Text(
-                      "Register now ?",
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xff33691e),
+                    _form(context),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Center(
+                      child: Text(
+                        "Register now ?",
+                        style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff33691e),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-        ));
+          )),
+    );
   }
 
   Key _key = GlobalKey<FormState>();

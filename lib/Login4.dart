@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login4 extends StatefulWidget {
   @override
@@ -19,59 +20,64 @@ class _Login4State extends State<Login4> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomPadding: false,
-      body: Stack(
-        children: <Widget>[
-          Image.asset(
-            'assets/images/Gym.png',
-            fit: BoxFit.cover,
-          ),
-          Opacity(
-            opacity: 0.5,
-            child: CustomPaint(
-              painter: CPainter(rPoint: .20, lPoint: .30),
+    return Theme(
+      data: ThemeData(
+        fontFamily: GoogleFonts.montserrat().fontFamily,
+      ),
+      child: Scaffold(
+        resizeToAvoidBottomPadding: false,
+        body: Stack(
+          children: <Widget>[
+            Image.asset(
+              'assets/images/Gym.png',
+              fit: BoxFit.cover,
+            ),
+            Opacity(
+              opacity: 0.5,
+              child: CustomPaint(
+                painter: CPainter(rPoint: .20, lPoint: .30),
+                size: Size(double.infinity, double.infinity),
+              ),
+            ),
+            CustomPaint(
+              painter: CPainter(rPoint: .30, lPoint: .40),
               size: Size(double.infinity, double.infinity),
             ),
-          ),
-          CustomPaint(
-            painter: CPainter(rPoint: .30, lPoint: .40),
-            size: Size(double.infinity, double.infinity),
-          ),
-          Scaffold(
-            backgroundColor: Colors.transparent,
-            appBar: AppBar(
+            Scaffold(
               backgroundColor: Colors.transparent,
-              elevation: 0,
-            ),
-            body: Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                padding:  EdgeInsets.only(left: 30,bottom: 50),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Login to start!',
-                      style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.amber[300],
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1
+              appBar: AppBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+              ),
+              body: Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding:  EdgeInsets.only(left: 30,bottom: 50),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Login to start!',
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.amber[300],
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 25,),
-                    _form(context),
-                    SizedBox(height: 25,),
-                    _forgetandsignin(context),
-                    SizedBox(height: 15,),
-                  ],
+                      SizedBox(height: 25,),
+                      _form(context),
+                      SizedBox(height: 25,),
+                      _forgetandsignin(context),
+                      SizedBox(height: 15,),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

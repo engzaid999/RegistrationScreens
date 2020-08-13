@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login1 extends StatefulWidget {
   @override
@@ -23,7 +24,7 @@ class _Login1State extends State<Login1> {
       resizeToAvoidBottomPadding: false,
       body: Theme(
         data: ThemeData(
-          fontFamily: 'Montserrat',
+          fontFamily: GoogleFonts.montserrat().fontFamily,
         ),
         child: Stack(
           alignment: Alignment.topCenter,
@@ -43,26 +44,20 @@ class _Login1State extends State<Login1> {
                   child: Text(
                     "Welcome back!",
                     style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.white,
-                      letterSpacing: 1
-                    ),
+                        fontSize: 30, color: Colors.white, letterSpacing: 1),
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 25),
                   child: Text(
                     "Sign in to your account",
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.white),
+                    style: TextStyle(fontSize: 15, color: Colors.white),
                   ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 _form(context),
-
                 Padding(
                   padding: const EdgeInsets.only(left: 15, top: 60),
                   child: Row(
@@ -71,9 +66,7 @@ class _Login1State extends State<Login1> {
                       Center(
                         child: Text(
                           "Don\'t have an account?  ",
-                          style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.white),
+                          style: TextStyle(fontSize: 14, color: Colors.white),
                         ),
                       ),
                       Center(
@@ -81,8 +74,8 @@ class _Login1State extends State<Login1> {
                           "Create One",
                           style: TextStyle(
                             decoration: TextDecoration.underline,
-                              fontSize: 16,
-                              color: Colors.white,
+                            fontSize: 16,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -152,9 +145,7 @@ class _Login1State extends State<Login1> {
                 onTap: () {},
                 child: Text(
                   "Forgot password",
-                  style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.red),
+                  style: TextStyle(fontSize: 16, color: Colors.red),
                 ),
               ),
             ),
@@ -163,7 +154,7 @@ class _Login1State extends State<Login1> {
               child: Transform.translate(
                 offset: Offset(20, 20),
                 child: GestureDetector(
-                  onTap: (){},
+                  onTap: () {},
                   child: Container(
                     height: 45,
                     width: 130,
@@ -180,11 +171,19 @@ class _Login1State extends State<Login1> {
                         Text(
                           "LOGIN",
                           style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.black),
+                            fontSize: 15,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                        SizedBox(width: 8,),
-                        Icon(Icons.arrow_forward,size: 18,color: Colors.white,)
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Icon(
+                          Icons.arrow_forward,
+                          size: 18,
+                          color: Colors.white,
+                        )
                       ],
                     ),
                   ),

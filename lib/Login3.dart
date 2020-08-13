@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login3 extends StatefulWidget {
   @override
@@ -19,71 +20,76 @@ class _Login3State extends State<Login3> {
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomPadding: false,
-      body: Stack(
-        children: <Widget>[
-          Image.asset('assets/images/girl2.jpg',fit: BoxFit.cover,
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          ),
-          SafeArea(
-            child: Padding(
-              padding:  EdgeInsets.only(left: 20),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Sign in',
-                    style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                  _form(context),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      GestureDetector(
-                        onTap: () {},
-                        child: Text(
-                          "Forgot password",
-                          style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.white),
-                        ),
-                      ),
-                      SizedBox(height: 8,),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Text(
-                          "Don\'t have an account?",
-                          style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.white),
-                        ),
-                      ),
-                      SizedBox(height: 8,),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Text(
-                          "Create one.",
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                              fontSize: 14,
-                              color: Colors.white),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+    return Theme(
+      data: ThemeData(
+        fontFamily: GoogleFonts.montserrat().fontFamily,
+      ),
+      child: Scaffold(
+        resizeToAvoidBottomPadding: false,
+        body: Stack(
+          children: <Widget>[
+            Image.asset('assets/images/girl2.jpg',fit: BoxFit.cover,
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
             ),
-          )
+            SafeArea(
+              child: Padding(
+                padding:  EdgeInsets.only(left: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Sign in',
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    _form(context),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        GestureDetector(
+                          onTap: () {},
+                          child: Text(
+                            "Forgot password",
+                            style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.white),
+                          ),
+                        ),
+                        SizedBox(height: 8,),
+                        GestureDetector(
+                          onTap: () {},
+                          child: Text(
+                            "Don\'t have an account?",
+                            style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.white),
+                          ),
+                        ),
+                        SizedBox(height: 8,),
+                        GestureDetector(
+                          onTap: () {},
+                          child: Text(
+                            "Create one.",
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                                fontSize: 14,
+                                color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            )
 
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -169,7 +175,8 @@ class _Login3State extends State<Login3> {
                                 "LOGIN",
                                 style: TextStyle(
                                     fontSize: 15,
-                                    color: Colors.black),
+                                    color: Colors.black,
+                                fontWeight: FontWeight.bold),
                               ),
                               SizedBox(width: 8,),
                               Icon(Icons.arrow_forward,size: 18,color: Colors.white,)

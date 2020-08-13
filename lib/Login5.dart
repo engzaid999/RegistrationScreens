@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login5 extends StatefulWidget {
   @override
@@ -9,64 +10,71 @@ class Login5 extends StatefulWidget {
 class _Login5State extends State<Login5> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xff152A4E),
-      body: Stack(
-        children: [
-          CustomPaint(
-            painter: CPcurves(),
-            size: Size(double.infinity, double.infinity),
-          ),
-          SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Center(
-                  child: Container(
-                    padding: EdgeInsets.only(top: 70),
-                    child: Column(
-                      children: [
-                        Text(
-                          'Welcome back to',
-                          style:
-                              TextStyle(fontSize: 15, color: Color(0xff152A4E)),
-                        ),
-                        Text(
-                          'BooStock',
-                          style: TextStyle(
-                              fontSize: 40,
+    return Theme(
+      data: ThemeData(
+        fontFamily: GoogleFonts.montserrat().fontFamily,
+      ),
+      child: Scaffold(
+        backgroundColor: Color(0xff152A4E),
+        body: Stack(
+          children: [
+            CustomPaint(
+              painter: CPcurves(),
+              size: Size(double.infinity, double.infinity),
+            ),
+            SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Center(
+                    child: Container(
+                      padding: EdgeInsets.only(top: 70),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Welcome back to',
+                            style: TextStyle(
+                              fontSize: 15,
                               color: Color(0xff152A4E),
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 40,
-                        ),
-                        CircleAvatar(
-                          radius: 45,
-                          backgroundColor: Colors.white,
-                          child: CircleAvatar(
-                            radius: 40,
-                            backgroundImage:
-                                AssetImage('assets/images/zaid.jpg'),
+                            ),
                           ),
-                        ),
-                      ],
+                          Text(
+                            'BooStock',
+                            style: TextStyle(
+                                fontSize: 40,
+                                color: Color(0xff152A4E),
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          CircleAvatar(
+                            radius: 45,
+                            backgroundColor: Colors.white,
+                            child: CircleAvatar(
+                              radius: 40,
+                              backgroundImage:
+                                  AssetImage('assets/images/zaid.jpg'),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Please login to continue',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
-                ),
-                _form(context),
-              ],
-            ),
-          )
-        ],
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Please login to continue',
+                    style: TextStyle(fontSize: 15, color: Colors.white),
+                  ),
+                  _form(context),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -137,7 +145,12 @@ class _Login5State extends State<Login5> {
               height: 50,
               child: RaisedButton(
                   color: Color(0xffffb300),
-                  child: Text('SIGN IN'),
+                  child: Text(
+                    'SIGN IN',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   onPressed: () {}),
             ),
             SizedBox(
@@ -151,9 +164,7 @@ class _Login5State extends State<Login5> {
                   style: TextStyle(fontSize: 13, color: Colors.white),
                 ),
                 GestureDetector(
-                  onTap: (){
-
-                  },
+                  onTap: () {},
                   child: Text("Create one",
                       style: TextStyle(
                           decoration: TextDecoration.underline,

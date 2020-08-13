@@ -14,6 +14,7 @@ dependencies:
 
   cupertino_icons: ^0.1.2
   flutter_svg:
+  google_fonts: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -32,13 +33,13 @@ flutter:
     - assets/svg/Mobilelog.svg
 
 
-  fonts:
-     - family: RedRoser
-       fonts:
-         - asset: assets/fonts/RedRoser.ttf
-
-     - family: Montserrat
-       fonts:
-         - asset: assets/fonts/Montserrat-SemiBold.ttf
+#  fonts:
+#     - family: RedRoser
+#       fonts:
+#         - asset: assets/fonts/RedRoser.ttf
+#
+#     - family: Montserrat
+#       fonts:
+#         - asset: assets/fonts/Montserrat-SemiBold.ttf
 
 
