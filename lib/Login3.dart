@@ -72,7 +72,7 @@ class _Login3State extends State<Login3> {
                           "Create one.",
                           style: TextStyle(
                             decoration: TextDecoration.underline,
-                              fontSize: 12,
+                              fontSize: 14,
                               color: Colors.white),
                         ),
                       ),
