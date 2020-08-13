@@ -4,6 +4,8 @@ import 'package:registration/Login2.dart';
 import 'package:registration/Login3.dart';
 import 'package:registration/Login4.dart';
 
+import 'Login5.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Montserrat',
       ),
-      home: Login4(),
+      home: Login5(),
     );
   }
 }
