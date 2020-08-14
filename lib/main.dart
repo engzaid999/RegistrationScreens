@@ -3,6 +3,7 @@ import 'package:registration/Login1.dart';
 import 'package:registration/Login2.dart';
 import 'package:registration/Login3.dart';
 import 'package:registration/Login4.dart';
+import 'package:registration/Login6.dart';
 
 import 'Login5.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Login1(),
+      home: Login6(),
     );
   }
 }
