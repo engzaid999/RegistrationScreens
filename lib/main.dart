@@ -4,7 +4,7 @@ import 'package:registration/Login2.dart';
 import 'package:registration/Login3.dart';
 import 'package:registration/Login4.dart';
 import 'package:registration/Login6.dart';
-import 'package:registration/Login7/Login7.dart';
+import 'file:///E:/Projects/FlutterUI/registration/lib/Login7.dart';
 
 import 'Login5.dart';
 
