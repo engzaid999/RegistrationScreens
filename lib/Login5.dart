@@ -185,6 +185,7 @@ class CPcurves extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     Paint paint1 = Paint();
     paint1.color = Color(0xffffb300);
+
     Path path1 = Path();
     path1.lineTo(0, 0);
     path1.lineTo(0, size.height * .25);
@@ -197,6 +198,7 @@ class CPcurves extends CustomPainter {
 
     Paint paint2 = Paint();
     paint2.color = Color(0xffffe082);
+
     Path path2 = Path();
     path2.lineTo(0, 0);
     path2.lineTo(0, size.height * .15);

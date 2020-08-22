@@ -4,6 +4,7 @@ import 'package:registration/Login2.dart';
 import 'package:registration/Login3.dart';
 import 'package:registration/Login4.dart';
 import 'package:registration/Login6.dart';
+import 'package:registration/Login8/welcomeScreen.dart';
 import 'file:///E:/Projects/FlutterUI/registration/lib/Login7.dart';
 
 import 'Login5.dart';
@@ -11,7 +12,7 @@ import 'Login5.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Login7(),
+      home:WelcomeScreen(),
     );
   }
 }
