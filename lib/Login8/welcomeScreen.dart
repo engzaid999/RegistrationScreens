@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:registration/Login8/LoginScreen.dart';
+import 'package:registration/Login8/signUpScreen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -48,23 +50,22 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       ),
                     ),
                     SizedBox(height: 30,),
-
                     RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      color: Color(0xffFF8667),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        color: Color(0xffFF8667),
                         child: Container(
-                            margin: EdgeInsets.only(left: 15,right: 15),
-                            child: Text('Login',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18
-                            ),
-                            )
-                        ),
-                        onPressed: (){}
-                        ),
+                            margin: EdgeInsets.only(left: 15, right: 15),
+                            child: Text(
+                              'Login',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            )),
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => LoginScreen()));
+                        }),
                   ],
                 ),
               ),
@@ -85,7 +86,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
                     GestureDetector(
                       onTap: (){
-
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> SignUpScreen()));
                       },
                       child: Text(
                         "Register",
