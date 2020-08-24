@@ -50,11 +50,155 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
             ),
+            Positioned(
+              top: 280,
+              left: 15,
+              right: 15,
+              child: _form(context),
+            )
           ],
         ),
       ),
     );
   }
+
+  Key _key = GlobalKey<FormState>();
+
+  _form(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(10),
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        child: Form(
+          key: _key,
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: InputDecoration(
+                    hintText: ' Enter Your Name',
+                    hintStyle: TextStyle(color: Colors.black26),
+                    filled: true,
+                    fillColor: _Grcolor,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    )),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    hintText: ' Enter Your Email/Phone',
+                    hintStyle: TextStyle(color: Colors.black26),
+                    filled: true,
+                    fillColor: _Grcolor,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    )),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    hintText: ' Enter Your Password',
+                    hintStyle: TextStyle(color: Colors.black26),
+                    filled: true,
+                    fillColor: _Grcolor,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    )),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    hintText: ' Conform  Password',
+                    hintStyle: TextStyle(color: Colors.black26),
+                    filled: true,
+                    fillColor: _Grcolor,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:
+                      BorderSide(color: Colors.transparent, width: 0),
+                    )),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+
+              Container(
+                width: MediaQuery.of(context).size.width ,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: _Orcolor,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                  child: Text(
+                    'Create Now',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
 }
 
 class _CuDraw1 extends  CustomPainter{
